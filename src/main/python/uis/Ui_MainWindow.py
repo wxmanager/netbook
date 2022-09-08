@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading uelement file 'C:\Users\S305126\Documents\GitHub\netbook\src\main\python\ui_uics\Ui_MainWindow.uelement'
+# Form implementation generated from reading ui file 'C:\Users\S305126\Documents\GitHub\netbook\src\main\python\ui_uics\Ui_MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -38,19 +38,19 @@ class Ui_MainWindow(object):
         self.gridLayout.setHorizontalSpacing(60)
         self.gridLayout.setVerticalSpacing(15)
         self.gridLayout.setObjectName("gridLayout")
-        self.pushButton = QtWidgets.QPushButton(self.homeTab)
-        self.pushButton.setMinimumSize(QtCore.QSize(0, 300))
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 1, 2, 1, 1)
         self.pushButton_2 = QtWidgets.QPushButton(self.homeTab)
         self.pushButton_2.setMinimumSize(QtCore.QSize(0, 300))
         self.pushButton_2.setObjectName("pushButton_2")
         self.gridLayout.addWidget(self.pushButton_2, 1, 0, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(self.homeTab)
+        self.pushButton.setMinimumSize(QtCore.QSize(0, 300))
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout.addWidget(self.pushButton, 1, 2, 1, 1)
         self.pushButton_3 = QtWidgets.QPushButton(self.homeTab)
         self.pushButton_3.setMinimumSize(QtCore.QSize(0, 300))
         self.pushButton_3.setObjectName("pushButton_3")
         self.gridLayout.addWidget(self.pushButton_3, 1, 1, 1, 1)
-        self.gridLayout_3.addLayout(self.gridLayout, 0, 0, 1, 1)
+        self.gridLayout_3.addLayout(self.gridLayout, 2, 0, 1, 1)
         self.tabWidget.addTab(self.homeTab, "")
         self.settingsTab = QtWidgets.QWidget()
         self.settingsTab.setObjectName("settingsTab")
@@ -58,16 +58,14 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.tabWidget, 1, 0, 1, 1)
         self.exitButton = QtWidgets.QPushButton(self.centralwidget)
         self.exitButton.setMinimumSize(QtCore.QSize(15, 15))
+        self.exitButton.setMaximumSize(QtCore.QSize(400, 16777215))
         self.exitButton.setObjectName("exitButton")
-        self.gridLayout_2.addWidget(self.exitButton, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.exitButton, 2, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1010, 56))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1010, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -76,12 +74,12 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "Files"))
         self.pushButton_2.setText(_translate("MainWindow", "Text Editor"))
+        self.pushButton.setText(_translate("MainWindow", "Files"))
         self.pushButton_3.setText(_translate("MainWindow", "Web Browser"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.homeTab), _translate("MainWindow", "Home"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.settingsTab), _translate("MainWindow", "Settings"))
-        self.exitButton.setText(_translate("MainWindow", "Exit"))
+        self.exitButton.setText(_translate("MainWindow", "Go to Dektop"))
 
 
 if __name__ == "__main__":

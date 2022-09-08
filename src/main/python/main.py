@@ -15,8 +15,11 @@ class MainWindow:
 
         self.uelement.exitButton.clicked.connect(sys.exit)
 
+
+
     def show(self):
         self.mainwin.show()
+
 
 
 if __name__ == "__main__":
