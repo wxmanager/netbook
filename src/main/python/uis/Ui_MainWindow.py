@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\S305126\Documents\GitHub\netbook\src\main\python\ui_uics\Ui_MainWindow.ui'
+# Form implementation generated from reading ui file 'c:\Users\S305126\Documents\GitHub\netbook\src\main\python\ui_uics\Ui_MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -14,16 +14,38 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1010, 889)
+        MainWindow.resize(1062, 753)
         MainWindow.setMinimumSize(QtCore.QSize(0, 14))
         font = QtGui.QFont()
         font.setPointSize(22)
         MainWindow.setFont(font)
+        MainWindow.setLayoutDirection(QtCore.Qt.LeftToRight)
+        MainWindow.setAutoFillBackground(False)
         MainWindow.setInputMethodHints(QtCore.Qt.ImhMultiLine)
+        MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
+        MainWindow.setDockNestingEnabled(False)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout_2.setObjectName("gridLayout_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.welcomeLabel = QtWidgets.QLabel(self.centralwidget)
+        self.welcomeLabel.setTextFormat(QtCore.Qt.PlainText)
+        self.welcomeLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.welcomeLabel.setObjectName("welcomeLabel")
+        self.horizontalLayout.addWidget(self.welcomeLabel)
+        self.timeLabel = QtWidgets.QLabel(self.centralwidget)
+        self.timeLabel.setText("")
+        self.timeLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.timeLabel.setObjectName("timeLabel")
+        self.horizontalLayout.addWidget(self.timeLabel)
+        self.exitButton = QtWidgets.QPushButton(self.centralwidget)
+        self.exitButton.setMinimumSize(QtCore.QSize(15, 15))
+        self.exitButton.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.exitButton.setObjectName("exitButton")
+        self.horizontalLayout.addWidget(self.exitButton)
+        self.gridLayout_2.addLayout(self.horizontalLayout, 2, 0, 1, 1)
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(22)
@@ -50,20 +72,15 @@ class Ui_MainWindow(object):
         self.pushButton_3.setMinimumSize(QtCore.QSize(0, 300))
         self.pushButton_3.setObjectName("pushButton_3")
         self.gridLayout.addWidget(self.pushButton_3, 1, 1, 1, 1)
-        self.gridLayout_3.addLayout(self.gridLayout, 2, 0, 1, 1)
+        self.gridLayout_3.addLayout(self.gridLayout, 0, 1, 1, 1)
         self.tabWidget.addTab(self.homeTab, "")
         self.settingsTab = QtWidgets.QWidget()
         self.settingsTab.setObjectName("settingsTab")
         self.tabWidget.addTab(self.settingsTab, "")
-        self.gridLayout_2.addWidget(self.tabWidget, 1, 0, 1, 1)
-        self.exitButton = QtWidgets.QPushButton(self.centralwidget)
-        self.exitButton.setMinimumSize(QtCore.QSize(15, 15))
-        self.exitButton.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.exitButton.setObjectName("exitButton")
-        self.gridLayout_2.addWidget(self.exitButton, 2, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.tabWidget, 3, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1010, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1062, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
 
@@ -74,12 +91,13 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.welcomeLabel.setText(_translate("MainWindow", "Welcome!"))
+        self.exitButton.setText(_translate("MainWindow", "Go to Dektop"))
         self.pushButton_2.setText(_translate("MainWindow", "Text Editor"))
         self.pushButton.setText(_translate("MainWindow", "Files"))
         self.pushButton_3.setText(_translate("MainWindow", "Web Browser"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.homeTab), _translate("MainWindow", "Home"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.settingsTab), _translate("MainWindow", "Settings"))
-        self.exitButton.setText(_translate("MainWindow", "Go to Dektop"))
 
 
 if __name__ == "__main__":
