@@ -13,7 +13,8 @@ from PyQt5.QtCore import QTimer, QTime
 
 
 
-welcomes = ["Welcome!", "Hello", "G'Day!", "Get to browsing!"]
+welcomes = ["Hi!", "Hey there!", "How are things?", "It’s good to see you", "G’day!", "Howdy!", "What’s up?", "How’s it going?", "What’s happening?"]
+
 
 
 class MainWindow:
@@ -25,31 +26,30 @@ class MainWindow:
         self.mainwin.showFullScreen()
 
         self.uielement.exitButton.clicked.connect(sys.exit)
-        self.uielement.welcomeLabel.setText("Hello world")
         self.clock = self.uielement.timeLabel
 
         self.timer = QTimer()
         self.timer.timeout.connect(self.gettime)
         self.timer.start(1000)
-        
 
         
-
         
-
+    
+    def randomwelcome(self):
+        self.uielement.welcomeLabel.setText(random.choice(welcomes))
 
     def gettime(self):
         nowtime = datetime.now()
         clockvar = nowtime.strftime("%I:%M:%S %p - %D")
         self.clock.setText(clockvar)
-        
-         
-
+    
 
     def show(self):
         self.mainwin.show()
         self.gettime()
-
+        self.randomwelcome()
+    
+   
     
 
 if __name__ == "__main__":
