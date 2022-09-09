@@ -46,7 +46,7 @@
       <item>
        <widget class="QLabel" name="welcomeLabel">
         <property name="text">
-         <string>Welcome!</string>
+         <string/>
         </property>
         <property name="textFormat">
          <enum>Qt::PlainText</enum>
@@ -87,7 +87,7 @@
       </item>
      </layout>
     </item>
-    <item row="3" column="0">
+    <item row="8" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="font">
        <font>
@@ -97,67 +97,76 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
-        <string>Home</string>
+        <string>Web</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="1">
-         <layout class="QGridLayout" name="gridLayout" rowstretch="0,0">
-          <property name="leftMargin">
-           <number>60</number>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="webLayout">
+          <item>
+           <layout class="QHBoxLayout" name="urlLayout">
+            <item>
+             <widget class="QPushButton" name="backButton">
+              <property name="text">
+               <string>&lt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="forwardButton">
+              <property name="text">
+               <string>&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="reloadButton">
+              <property name="text">
+               <string>Reload</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="urlBar"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="atomizerTab">
+       <attribute name="title">
+        <string>Text Editor</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit">
+          <property name="placeholderText">
+           <string/>
           </property>
-          <property name="topMargin">
-           <number>60</number>
-          </property>
-          <property name="rightMargin">
-           <number>60</number>
-          </property>
-          <property name="bottomMargin">
-           <number>60</number>
-          </property>
-          <property name="horizontalSpacing">
-           <number>60</number>
-          </property>
-          <property name="verticalSpacing">
-           <number>15</number>
-          </property>
-          <item row="1" column="0">
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>300</height>
-             </size>
-            </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="btnLayout">
+          <item>
+           <widget class="QPushButton" name="saveButton">
             <property name="text">
-             <string>Text Editor</string>
+             <string>Save</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
-           <widget class="QPushButton" name="pushButton">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>300</height>
-             </size>
-            </property>
+          <item>
+           <widget class="QPushButton" name="openButton">
             <property name="text">
-             <string>Files</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QPushButton" name="pushButton_3">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>300</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Web Browser</string>
+             <string>Open</string>
             </property>
            </widget>
           </item>
@@ -169,20 +178,23 @@
        <attribute name="title">
         <string>Settings</string>
        </attribute>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>230</y>
+          <width>251</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Coming Soon</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1062</width>
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <resources/>
