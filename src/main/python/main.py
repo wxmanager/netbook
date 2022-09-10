@@ -49,8 +49,16 @@ class MainWindow:
         self.uielement.forwardButton.clicked.connect(self.WebEngine.forward)
         self.uielement.reloadButton.clicked.connect(self.WebEngine.reload)
 
+        self.uielement.cmdinput.returnPressed.connect(self.runCommand)
 
-
+    
+    def runCommand(self):
+                command_line = self.uielement.cmdinput.text()
+                p = os.popen(command_line)
+                if p:
+                    self.uielement.cmdinput.clear()
+                    output = p.read()
+                    self.uielement.cmdoutput.insertPlainText(output)
         
         
     

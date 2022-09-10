@@ -193,7 +193,18 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <layout class="QVBoxLayout" name="consoleLayout"/>
+         <layout class="QVBoxLayout" name="consoleLayout">
+          <item>
+           <widget class="QPlainTextEdit" name="cmdoutput">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="cmdinput"/>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
