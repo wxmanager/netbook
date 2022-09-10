@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui
 from uis.Ui_MainWindow import Ui_MainWindow
 from PyQt5.QtCore import QTimer, QTime
 from PyQt5.QtCore import *
+from termqt import Terminal, TerminalExecIO
 
 # QT WebEngine Widgets
 from PyQt5.QtWebEngineWidgets import *
@@ -48,6 +49,12 @@ class MainWindow:
         self.uielement.backButton.clicked.connect(self.WebEngine.back)
         self.uielement.forwardButton.clicked.connect(self.WebEngine.forward)
         self.uielement.reloadButton.clicked.connect(self.WebEngine.reload)
+
+        self.terminal = Terminal(400, 300)
+        self.terminal.maximum_line_history = 2000
+        self.uielement.consoleLayout.addWidget(self.terminal)
+
+
         
         
     
@@ -81,14 +88,10 @@ class MainWindow:
         q = QUrl(self.uielement.urlBar.text())
         self.WebEngine.setUrl(q)
 
-        
     def show(self):
         self.mainwin.show()
         self.gettime()
         self.randomwelcome()
-    
-    
-                    
     
 
 if __name__ == "__main__":

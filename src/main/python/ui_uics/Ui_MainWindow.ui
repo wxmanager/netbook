@@ -110,7 +110,7 @@
        <attribute name="title">
         <string>Web</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
          <layout class="QVBoxLayout" name="webLayout">
           <item>
@@ -145,10 +145,15 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="filesTab">
        <attribute name="title">
         <string>Files</string>
        </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="atomizerTab">
        <attribute name="title">
@@ -182,23 +187,42 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="consoleTab">
+       <attribute name="title">
+        <string>Console</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="consoleLayout"/>
+        </item>
+       </layout>
+      </widget>
       <widget class="QWidget" name="settingsTab">
        <attribute name="title">
         <string>Settings</string>
        </attribute>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>370</x>
-          <y>230</y>
-          <width>251</width>
-          <height>131</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Coming Soon</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QCheckBox" name="checkBox">
+          <property name="text">
+           <string>Enable Terminal Console</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
