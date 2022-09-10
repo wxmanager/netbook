@@ -54,10 +54,10 @@ class MainWindow:
         self.terminal.maximum_line_history = 2000
         self.uielement.consoleLayout.addWidget(self.terminal)
 
-        self.terminal_io = TerminalExecIO(self.terminal.row_len, terminal.col_len, "/bin/bash")
-        self.terminal_io.stdout_callback = terminal.stdout
-        self.terminal.stdin_callback = terminal_io.write
-        self.terminal.resize_callback = terminal_io.resize
+        self.terminal_io = TerminalExecIO(self.terminal.row_len, self.terminal.col_len, "/bin/bash")
+        self.terminal_io.stdout_callback = self.terminal.stdout
+        self.terminal.stdin_callback = self.terminal_io.write
+        self.terminal.resize_callback = self.terminal_io.resize
         self.terminal_io.spawn()
 
 
