@@ -19,8 +19,10 @@ For ARM7 and ARM8 Users id recommend any debian based distro, I've tested this o
 
 you need to install the following packages if you will be cloning from git! Please keep in mind APT is your best option as of right now because pip doesn't seem to work on ARM
 
-PyQT5:
+- PyQT5:
 `sudo apt install python3-pyqt5`
 
-QtWebEngineWidgets:
+- QtWebEngineWidgets:
 `sudo apt-get install python3-pyqt5.qtwebengine`
+
+- termQt: Not avaliable on pip but you can download the package [here](https://github.com/TerryGeng/termqt/releases/download/0.1/termqt-0.1-py3-none-any.whl)
