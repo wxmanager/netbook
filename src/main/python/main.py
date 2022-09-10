@@ -50,16 +50,6 @@ class MainWindow:
         self.uielement.forwardButton.clicked.connect(self.WebEngine.forward)
         self.uielement.reloadButton.clicked.connect(self.WebEngine.reload)
 
-        self.terminal = Terminal(400, 300)
-        self.terminal.maximum_line_history = 2000
-        self.uielement.consoleLayout.addWidget(self.terminal)
-
-        self.terminal_io = TerminalExecIO(self.terminal.row_len, self.terminal.col_len, "/bin/bash")
-        self.terminal_io.stdout_callback = self.terminal.stdout
-        self.terminal.stdin_callback = self.terminal_io.write
-        self.terminal.resize_callback = self.terminal_io.resize
-        self.terminal_io.spawn()
-
 
 
         
