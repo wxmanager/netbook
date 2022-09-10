@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1062</width>
-    <height>753</height>
+    <height>746</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -103,6 +103,9 @@
       <property name="tabsClosable">
        <bool>false</bool>
       </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
       <widget class="QWidget" name="homeTab">
        <attribute name="title">
         <string>Web</string>
@@ -142,6 +145,11 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Files</string>
+       </attribute>
+      </widget>
       <widget class="QWidget" name="atomizerTab">
        <attribute name="title">
         <string>Text Editor</string>
@@ -178,24 +186,19 @@
        <attribute name="title">
         <string>Settings</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_4">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <widget class="QTabWidget" name="tabWidget_2">
-            <property name="currentIndex">
-             <number>0</number>
-            </property>
-            <widget class="QWidget" name="tab">
-             <attribute name="title">
-              <string>Developer Options</string>
-             </attribute>
-            </widget>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>230</y>
+          <width>251</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Coming Soon</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
