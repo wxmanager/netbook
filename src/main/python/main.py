@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui
 from uis.Ui_MainWindow import Ui_MainWindow
 from PyQt5.QtCore import QTimer, QTime
 from PyQt5.QtCore import *
-from py3qterm import TerminalWidget
+
 
 
 # QT WebEngine Widgets
@@ -51,8 +51,7 @@ class MainWindow:
         self.uielement.forwardButton.clicked.connect(self.WebEngine.forward)
         self.uielement.reloadButton.clicked.connect(self.WebEngine.reload)
         
-        self.console = TerminalWidget
-        self.uielement.consoleLayout.addWidget(self.console)
+
         
 
 
