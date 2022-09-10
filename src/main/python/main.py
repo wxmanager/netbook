@@ -12,8 +12,6 @@ from uis.Ui_MainWindow import Ui_MainWindow
 from PyQt5.QtCore import QTimer, QTime
 from PyQt5.QtCore import *
 
-from pyqtconsole.console import PythonConsole
-
 # QT WebEngine Widgets
 from PyQt5.QtWebEngineWidgets import *
 
@@ -50,12 +48,7 @@ class MainWindow:
         self.uielement.backButton.clicked.connect(self.WebEngine.back)
         self.uielement.forwardButton.clicked.connect(self.WebEngine.forward)
         self.uielement.reloadButton.clicked.connect(self.WebEngine.reload)
-        
 
-        
-        self.console = PythonConsole()
-
-        self.uielement.consoleLayout.addWidget(self.console)
 
 
         
