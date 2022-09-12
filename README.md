@@ -7,6 +7,7 @@ This will be a stripped down user interface for netbook and other low powered co
 - [x] Port Atomizer to its simplest form
 - [x] Create a light web browser for the user interface
 - [ ] (W.I.P) Develop a basic file manager
+- [ ] Clean up code structure
 
 ## Required Packages
 
