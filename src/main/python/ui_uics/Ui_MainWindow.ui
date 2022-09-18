@@ -151,7 +151,11 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QTreeView" name="treeView"/>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>

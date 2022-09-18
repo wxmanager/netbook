@@ -57,6 +57,7 @@ class MainWindow:
                 p = os.popen(command_line)
                 if p:
                     self.uielement.cmdinput.clear()
+                    self.uielement.cmdoutput.clear()
                     output = p.read()
                     self.uielement.cmdoutput.insertPlainText(output)
         
