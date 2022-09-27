@@ -26,7 +26,7 @@ class MainWindow:
         self.uielement = Ui_MainWindow()
 
         self.uielement.setupUi(self.mainwin)
-        self.mainwin.showFullScreen()
+        #self.mainwin.showFullScreen()
 
         self.uielement.exitButton.clicked.connect(sys.exit)
         self.clock = self.uielement.timeLabel
